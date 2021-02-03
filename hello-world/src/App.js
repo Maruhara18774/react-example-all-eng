@@ -8,12 +8,13 @@ import ClickedCount from './components/4Hook';
 import MyName from './components/5Iam'
 import Messeges from './components/6Messege'
 import Subcribe from './components/6Subcribe'
+import ChangeStatus from './components/7Bind';
 
 
 function App() {
   return (
     <div className="App">
-      <MyName name="Emma">Julia</MyName>
+      <ChangeStatus></ChangeStatus>
     </div>
   );
 }
