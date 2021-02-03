@@ -9,7 +9,6 @@ import React, { Component } from 'react';
 class MyName extends Component {
     constructor(props) {
         super(props);
-        
     }
     render() {
         return <div>

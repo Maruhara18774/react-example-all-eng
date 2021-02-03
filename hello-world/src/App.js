@@ -6,13 +6,14 @@ import BounjourWorld from './components/2BounjourWorld';
 import { HelloWorldAdv } from './components/3HelloWorldAdv';
 import ClickedCount from './components/4Hook';
 import MyName from './components/5Iam'
-
+import Messeges from './components/6Messege'
+import Subcribe from './components/6Subcribe'
 
 
 function App() {
   return (
     <div className="App">
-      <MyName></MyName>
+      <MyName name="Emma">Julia</MyName>
     </div>
   );
 }
