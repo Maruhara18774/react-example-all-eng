@@ -9,12 +9,13 @@ import MyName from './components/5Iam'
 import Messeges from './components/6Messege'
 import Subcribe from './components/6Subcribe'
 import ChangeStatus from './components/7Bind';
+import ObjParent from './components/8ParentComponent';
 
 
 function App() {
   return (
     <div className="App">
-      <ChangeStatus></ChangeStatus>
+      <ObjParent></ObjParent>
     </div>
   );
 }
