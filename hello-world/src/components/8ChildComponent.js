@@ -12,7 +12,7 @@ class ObjChild extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.props.greet}>Greet parent</button>
+                <button onClick={()=> this.props.greet('Child')}>Greet parent</button>
             </div>
         )
     }

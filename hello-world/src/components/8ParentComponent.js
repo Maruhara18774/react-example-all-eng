@@ -10,8 +10,8 @@ class ObjParent extends Component {
         }
         this.greetParent = this.greetParent.bind(this);
     }
-    greetParent(){
-        alert(`Hello parent ${this.state.parentName}`);
+    greetParent(childName){
+        alert(`Hello parent ${this.state.parentName} from ${childName}`);
     }
     
     render() {
