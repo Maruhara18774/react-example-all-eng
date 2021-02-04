@@ -20,49 +20,47 @@ var listPartners = [
         hobby: 'movie'
     }
 ]
-var choosen = {
-    choosenPartner: null
-}
-
-class ChoosenPartner extends Component {
-    render() {
-        return (
-            <div className="popUp">
-                <h3>Hi, I'm {choosen.choosenPartner.name}</h3>
-                <p>I'm {choosen.choosenPartner.age}</p>
-                <p>My phone number is {choosen.choosenPartner.phone}</p>
-                <p>I'm exciting with {choosen.choosenPartner.hobby}</p>
-                <p>Nice to meet you</p>
-                <button>Give me more time ...</button>
-            </div>
-        )
-    }
-}
 
 class Partner extends Component {
     constructor(props) {
         super(props)
-    
+
         this.state = {
-             choosenPartner: null
+            choosenPartner: null
         }
         //this.chooseOne = this.chooseOne.bind(this);
+        this.waitForAnother = this.waitForAnother.bind(this);
     }
-    
-    chooseOne(partner){
-        choosen.choosenPartner =partner;
+
+    chooseOne(partner) {
+        this.state.choosenPartner = partner;
+        this.setState(this);
+    }
+    waitForAnother(){
+        this.state.choosenPartner = null;
+        this.setState(this);
     }
     render() {
-        return (
-            choosen.choosenPartner == null?()=>
-                listPartners.map(partner => <div className="profieFrame" onClick={()=>this.chooseOne(partner)}>
+        if (this.state.choosenPartner == null) {
+            return listPartners.map(partner => <div className="profieFrame" onClick={() => this.chooseOne(partner)}>
                 <h3>Name: {partner.name}</h3>
                 <p>Age: {partner.age}</p>
                 <p>Phone: {partner.phone}</p>
                 <p>Hobby: {partner.hobby}</p>
-            </div>):
-            <ChoosenPartner></ChoosenPartner>
-        )
+            </div>)
+        }
+        else{
+            return (
+                <div className="popUp">
+                    <h3>Hi, I'm {this.state.choosenPartner.name}</h3>
+                    <p>I'm {this.state.choosenPartner.age}</p>
+                    <p>My phone number is {this.state.choosenPartner.phone}</p>
+                    <p>I'm exciting with {this.state.choosenPartner.hobby}</p>
+                    <p>Nice to meet you</p>
+                    <button onClick={this.waitForAnother}>Give me more time ...</button>
+                </div>
+            )
+        }
     }
 }
 
