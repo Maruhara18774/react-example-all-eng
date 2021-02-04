@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import './components/10Dating.css'
 import React from 'react';
 import HelloWorld from './components/1HelloWorld';
 import BounjourWorld from './components/2BounjourWorld';
@@ -11,14 +12,14 @@ import Subcribe from './components/6Subcribe';
 import ChangeStatus from './components/7Bind';
 import ObjParent from './components/8ParentComponent';
 import AlienMessege from './components/9Condition';
+import Storyteller from './components/10SnowWhiteTale';
+import Partner from './components/10Dating';
 
 
 function App() {
   return (
     <div className="App">
-      <AlienMessege></AlienMessege>
-      <AlienMessege alien="Kola"></AlienMessege>
-      <AlienMessege></AlienMessege>
+      <Partner></Partner>
     </div>
   );
 }

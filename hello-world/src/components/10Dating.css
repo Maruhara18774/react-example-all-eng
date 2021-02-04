@@ -1,0 +1,18 @@
+.profieFrame{
+    width:fit-content;
+    height: fit-content;
+    background-color: cyan;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 8px 8px 5px 5px rgba(66,76,184,1);
+    float: left;
+}
+.popUp{
+    z-index: 1;
+    align-items: center;
+    width:fit-content;
+    height: fit-content;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    border-style: dotted;
+}
