@@ -15,12 +15,13 @@ import Storyteller from './components/10SnowWhiteTale';
 import Partner from './components/10Dating';
 import RankBoard from './components/11Champion';
 import HeyYou from './components/12JStoCSS';
+import Form from './components/13FormHandling'
 
 
 function App() {
   return (
     <div className="App">
-      <HeyYou></HeyYou>
+      <Form></Form>
     </div>
   );
 }
