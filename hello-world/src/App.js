@@ -14,12 +14,13 @@ import ObjParent from './components/8ParentComponent';
 import AlienMessege from './components/9Condition';
 import Storyteller from './components/10SnowWhiteTale';
 import Partner from './components/10Dating';
+import RankBoard from './components/11Champion';
 
 
 function App() {
   return (
     <div className="App">
-      <Partner></Partner>
+      <RankBoard></RankBoard>
     </div>
   );
 }
