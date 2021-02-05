@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import './components/10Dating.css'
 import React from 'react';
 import HelloWorld from './components/1HelloWorld';
 import BounjourWorld from './components/2BounjourWorld';
@@ -15,12 +14,13 @@ import AlienMessege from './components/9Condition';
 import Storyteller from './components/10SnowWhiteTale';
 import Partner from './components/10Dating';
 import RankBoard from './components/11Champion';
+import HeyYou from './components/12JStoCSS';
 
 
 function App() {
   return (
     <div className="App">
-      <RankBoard></RankBoard>
+      <HeyYou></HeyYou>
     </div>
   );
 }
