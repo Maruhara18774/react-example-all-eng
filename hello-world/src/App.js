@@ -16,12 +16,13 @@ import Partner from './components/10Dating';
 import RankBoard from './components/11Champion';
 import HeyYou from './components/12JStoCSS';
 import Form from './components/13FormHandling'
+import Lifecycle from './components/14Lifecycle';
 
 
 function App() {
   return (
     <div className="App">
-      <Form></Form>
+      <Lifecycle></Lifecycle>
     </div>
   );
 }
