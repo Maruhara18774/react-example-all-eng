@@ -17,12 +17,13 @@ import RankBoard from './components/11Champion';
 import HeyYou from './components/12JStoCSS';
 import Form from './components/13FormHandling'
 import Lifecycle from './components/14Lifecycle';
+import FragmentDemo from './components/15Fragment';
 
 
 function App() {
   return (
     <div className="App">
-      <Lifecycle></Lifecycle>
+      <FragmentDemo></FragmentDemo>
     </div>
   );
 }
