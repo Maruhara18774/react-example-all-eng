@@ -6,6 +6,16 @@ import React, { Component } from 'react'
     3. componentWillUnmount
     *. componentDidCatch
 */
+
+function convertStatus(status){
+    if(status){
+        return "Done";
+    }
+    else{
+        return "Still not complete";
+    }
+}
+
 class Mounting extends Component {
     // initialize this component
     constructor(props) {
@@ -14,20 +24,24 @@ class Mounting extends Component {
         this.state = {
              constructor: false,
              derived: false,
+             render: false
 
         }
-        //alert("1 - Constructor")
+        this.setState({constructor: true})
     }
     // 
     static getDerivedStateFromProps(props,state){
-        //alert("2 - Derived")
     }
     render() {
-        //alert("3 - Render")
         return (
             <div>
                 <form>
-                    <label>Constructor: {}</label>
+                    <label>Constructor</label>
+                    <p>Status: {convertStatus(this.state.constructor)}</p>
+                    <label>Get derived state from props</label>
+                    <p>Status: {convertStatus(this.state.derived)}</p>
+                    <label>Render</label>
+                    <p>Status: {convertStatus(this.state.render)}</p>
                 </form>
             </div>
         )
@@ -87,7 +101,7 @@ class Lifecycle extends Component {
                 <form>
                     <div>
                         <label>Mounting</label>
-                        <p>Status: {this.convertStatus(this.state.didMount)}</p>
+                        <p>Status: {convertStatus(this.state.didMount)}</p>
                         <div>
                         <Mounting></Mounting>
                         </div>
@@ -95,7 +109,7 @@ class Lifecycle extends Component {
                     <br></br>
                     <div>
                         <label>Updating</label>
-                        <p>Status: {this.convertStatus(this.state.didUpdate)}</p>
+                        <p>Status: {convertStatus(this.state.didUpdate)}</p>
                         <div>
                         <Updating></Updating>
                         </div>
