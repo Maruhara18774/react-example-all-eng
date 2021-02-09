@@ -29,7 +29,6 @@ class Mounting extends Component {
         }
         this.setState({constructor: true})
     }
-    // 
     static getDerivedStateFromProps(props,state){
     }
     render() {
@@ -113,6 +112,10 @@ class Lifecycle extends Component {
                         <div>
                         <Updating></Updating>
                         </div>
+                    </div>
+                    <div>
+                        <label> Full </label>
+                        <a href="https://reactjs.org/docs/react-component.html">Link</a>
                     </div>
                 </form>
             </div>
