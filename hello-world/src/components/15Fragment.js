@@ -5,7 +5,7 @@ class FragmentDemo extends Component {
         return (
             <Fragment>
                 <h1>Hello fragment</h1>
-                <p>I'm new</p>
+                <p>I'm new.</p>
             </Fragment>
         )
     }
